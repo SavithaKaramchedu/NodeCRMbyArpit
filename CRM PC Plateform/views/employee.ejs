@@ -1,0 +1,62 @@
+<% include partials/header.ejs %>
+
+   
+
+    
+    <div class="col-sm-10 col-md-10 col-lg-10">
+        
+           
+                     
+                  <div class="tab-content">
+                       
+    <div id="accountsTab" class="tab-pane fade">
+            <h3>Menu 1</h3>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+          <div id="employeeTab" class="tab-pane fade">
+                <h3 style="border-bottom: 2px solid #5b8fde;padding-bottom: 8px;">EMPLOYEE INFORMATION</h3>
+                <div class="table-wrapper">
+<% if (players.length > 0) {%>
+
+ 
+
+<table class="table">
+<thead class="table" style="background-color: 1b213b ">
+ <tr style=" color:white; font-weight:bold ; background-color: #5b8fde">
+     <th scope="col">Name</th>
+     <th scope="col">Email</th>
+     <th scope="col">Mobile</th>
+     <th scope="col">Phone</th>
+     <th scope="col">Manager</th>
+
+ </tr>
+</thead>
+<tbody>
+ <% players.forEach((players, index) => { %>
+     <tr style=" color:black; font-weight:bold; ">
+         <th scope="row"><%= players.name %></th>
+         <td><%= players.email %></td>
+         <td><%= players.mobile %></td>
+         <td><%= players.phone %></td>
+         <td><%= players.manager %></td>
+   
+      
+     </tr>
+ <% }) %>
+</tbody>
+</table>
+
+<% } else { %>
+<p class="text-center">No Employee found. Go </p>
+<% } %>
+</div>
+ </div>
+          
+</div>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>
